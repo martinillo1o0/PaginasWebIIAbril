@@ -11,19 +11,24 @@
 
 <body>
 
-<form id="formulario">
+        <!-- Creamos el formulario que guarda en si los dos input  --> 
 
+<form id="formulario">
+ <!--Input de texto que recibe el nombre  --> 
   <div class="mb-3">
     <label for="texto1" class="form-label">Ingresa tu nombre</label>
+     <!--Llamada de funcion para cambiar de color  --> 
     <input type="text" onfocus="cambiar(this)" onblur="regresar(this)" class="form-control" id="texto1">
    
   </div>
 
   <div class="mb-3">
     <label for="texto2" class="form-label">Ingresa tu edad</label>
+     <!--Input de texto que recibe la edad  --> 
+       <!--Llamada de funcion para cambiar de color  --> 
     <input type="number"  onfocus="cambiar(this)" onblur="regresar(this)" class="form-control" id="texto2">
   </div>
-
+  <!--Boton que llama las demas funciones restantes  --> 
   <button type="submit" class="btn btn-primary" onclick="mostrar(event)" onclick="alerta()">Enviar</button>
   <div id="resultado"></div>
 </form>
