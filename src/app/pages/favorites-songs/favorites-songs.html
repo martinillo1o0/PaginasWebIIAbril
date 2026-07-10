@@ -1,0 +1,12 @@
+<section class="page-shell">
+  <div class="page-header">
+    <h1>Canciones favoritas</h1>
+    <p>Tus canciones preferidas con su puntuación personal.</p>
+  </div>
+
+  <div class="list-stack">
+    @for (song of favoritesSongs(); track song.tittle) {
+      <app-favorite-item [item]="song" [showSinger]="true" (toggleFavorite)="onFavorite($event)"></app-favorite-item>
+    }
+  </div>
+</section>

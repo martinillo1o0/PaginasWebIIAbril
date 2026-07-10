@@ -1,0 +1,24 @@
+<!-- Sección principal de la página de películas favoritas. -->
+<section class="page-shell">
+
+  <!-- Encabezado de la página con el título y una breve descripción. -->
+  <div class="page-header">
+    <h1>Películas favoritas</h1>
+    <p>Tu lista personal de películas favoritas.</p>
+  </div>
+
+  <!-- Contenedor donde se muestran todas las películas favoritas. -->
+  <div class="list-stack">
+
+    <!-- Recorre la lista de películas favoritas utilizando la directiva @for de Angular.
+         Se utiliza el título (tittle) como identificador para optimizar el renderizado. -->
+    @for (movie of favoritesMovies(); track movie.tittle) {
+
+      <!-- Muestra un componente por cada película.
+           Se envía la película mediante el Input "item" y se escucha el evento
+           "toggleFavorite" para ejecutar el método onFavorite del componente padre. -->
+      <app-favorite-item [item]="movie" (toggleFavorite)="onFavorite($event)"></app-favorite-item>
+
+    }
+  </div>
+</section>

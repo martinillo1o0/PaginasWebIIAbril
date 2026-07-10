@@ -1,0 +1,31 @@
+<section class="profile-card">
+  <div class="photo-box">
+    <img src="Sho_y_mi_perro.jpg" alt="Foto de perfil" />
+  </div>
+
+  <div class="profile-info">
+    <h1>Mi perfil</h1>
+
+    <dl>
+      <dt>Nombre:</dt>
+      <dd>{{ name() | uppercase }}</dd>
+
+      <dt>Edad:</dt>
+      <dd>{{ age() }}</dd>
+
+      <dt>Me gusta:</dt>
+      <dd>{{ likes() }}</dd>
+
+      <dt>Deporte favorito:</dt>
+      <dd>{{ favoriteSport() }}</dd>
+    </dl>
+
+    <button (click)="changeInformation()" class="btn-action">
+      Cambiar información
+    </button>
+    <button (click)="getBackInformation()" class="btn-action secondary">
+      Volver información
+    </button>
+  </div>
+</section>
+

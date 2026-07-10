@@ -1,0 +1,27 @@
+<article class="favorite-card">
+  <!-- Contenedor principal de la tarjeta que representa un elemento favorito. -->
+
+  <div class="favorite-info">
+    <!-- Sección donde se muestra la información principal del elemento. -->
+
+    <h3>{{ item.tittle }}</h3>
+    <!-- Muestra el título del elemento utilizando interpolación de Angular. -->
+
+    @if (showSinger && item.singer) {
+      <p class="favorite-singer">{{ item.singer }}</p>
+      <!-- Si la variable showSinger es verdadera y el elemento tiene un cantante,
+           se muestra el nombre del cantante. -->
+    }
+  </div>
+
+  <div class="favorite-actions">
+    <!-- Sección que contiene la calificación y las acciones disponibles. -->
+
+    <span class="score">Calificación: {{ item.myScore }}/10</span>
+    <!-- Muestra la calificación personal del usuario sobre un máximo de 10. -->
+
+    <button type="button" (click)="toggleFavorite.emit(item)">Marcar</button>
+    <!-- Al hacer clic en el botón se emite el evento toggleFavorite,
+         enviando el elemento actual al componente padre. -->
+  </div>
+</article>

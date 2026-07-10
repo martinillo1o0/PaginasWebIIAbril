@@ -1,0 +1,12 @@
+<section class="page-shell">
+  <div class="page-header">
+    <h1>Series favoritas</h1>
+    <p>Estas son tus series favoritas con su puntuación.</p>
+  </div>
+
+  <div class="list-stack">
+    @for (serie of favoritesSeries(); track serie.tittle) {
+      <app-favorite-item [item]="serie" (toggleFavorite)="onFavorite($event)"></app-favorite-item>
+    }
+  </div>
+</section>

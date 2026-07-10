@@ -1,0 +1,27 @@
+<!-- Barra de navegación principal de la aplicación. -->
+<nav class="bg-slate-900 px-6 py-4 shadow-lg">
+
+  <!-- Contenedor que centra el contenido y organiza los elementos con Flexbox. -->
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3">
+
+    <!-- Enlace que funciona como título del proyecto y dirige a la página de perfil. -->
+    <a class="text-lg font-semibold tracking-wide text-white" [routerLink]="['/perfil']" routerLinkActive="active">Mi proyecto personal</a>
+
+    <!-- Contenedor que agrupa todos los enlaces de navegación. -->
+    <div class="flex flex-wrap gap-2">
+
+      <!-- Enlace a la sección "Mi perfil". -->
+      <a class="rounded-full px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-white" [routerLink]="['/perfil']" routerLinkActive="active">Mi perfil</a>
+
+      <!-- Enlace a la sección de canciones favoritas. -->
+      <a class="rounded-full px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-white" [routerLink]="['/favCancion']" routerLinkActive="active">Canciones favoritas</a>
+
+      <!-- Enlace a la sección de series favoritas. -->
+      <a class="rounded-full px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-white" [routerLink]="['/favserie']" routerLinkActive="active">Series favoritas</a>
+
+      <!-- Enlace a la sección de películas favoritas. -->
+      <a class="rounded-full px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-white" [routerLink]="['/favPeli']" routerLinkActive="active">Películas favoritas</a>
+
+    </div>
+  </div>
+</nav>
