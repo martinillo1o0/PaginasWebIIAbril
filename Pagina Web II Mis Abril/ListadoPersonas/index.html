@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<!--Se crea un contenerdor el cual esta vinculado con mostrarPersonas() la cual es una funcion encargada de mostrar personas en el recuadro blanco-->
+<body onload="mostrarPersonas()">
+    <div class="contenedor" id="encabezado">
+        <h1>Listado de Personas</h1>
+    </div>
+    <div class="contenedor">
+        <div class="elemento">
+            <ul id="personas">
+
+            </ul>
+        </div>
+    </div>
+<!-- Despues dentro de otro contenedor, hacemos un boton el cual esta enlazado a la funcion agregarPersonas la cual recibe
+las personas una vez clickeando el boton. 
+-->
+    <div class="contenedor">
+        <div style="text-align: center;">
+            <button style="cursor: pointer" onclick="agregarPersona()">+</button>
+        </div>
+
+    <!--Formulario encargado de recibir el nombre y apellido ingresado -->
+<form id="formulario">
+
+<input type="text" id="nombre" placeholder="Nombre"/>
+<input type="text" id="apellido" placeholder="Apellido"/>
+
+</form>
+
+    </div>
+    <script src="js/persona.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
